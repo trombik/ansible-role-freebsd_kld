@@ -22,9 +22,9 @@ This variable is a list of dict.
 
 | Key | Description | Mandatory? |
 |-----|-------------|------------|
-| `name` | Name of the kernel module. `.ko` is typically not needed |
-| `load` | Load or unload the module |
-| `boot` | Apply the kernel module at boot.|
+| `name` | Name of the kernel module. `.ko` is typically not needed | yes |
+| `load` | Load or unload the module. The default is `yes` | no |
+| `boot` | Apply the kernel module at boot. The default is `yes` | no |
 
 # Dependencies
 
