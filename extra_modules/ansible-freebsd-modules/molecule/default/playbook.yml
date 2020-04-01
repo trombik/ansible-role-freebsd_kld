@@ -1,0 +1,24 @@
+---
+- hosts: freebsd
+  become: true
+  gather_facts: false
+  vars:
+    ansible_python_interpreter: /usr/local/bin/python
+  roles:
+    - name: ansible-freebsd-modules
+  tasks:
+    - name: Set facts for ansible-src usage
+      set_fact:
+        ansible_facts:
+          virtualization_type: vagrant
+          distribution: FreeBSD
+    - debug:
+        var: ansible_facts
+    - name: reset system state for sysrc/kld tests
+      include: ansible/setup_tests.yml
+    - name: sysrc ansible
+      include: ansible/sysrc_ansible.yml
+    - name: sysrc jails
+      include: ansible/sysrc_jail.yml
+    - name: kld tests
+      include: ansible/kld_ansible.yml
