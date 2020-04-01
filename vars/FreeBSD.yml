@@ -1,3 +1,1 @@
 ---
-__freebsd_kld_db_dir: /var/db/freebsd_kld
-__freebsd_kld_conf_dir: /usr/local/etc/freebsd_kld

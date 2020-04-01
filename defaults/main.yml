@@ -1,9 +1,2 @@
 ---
-freebsd_kld_user: freebsd_kld
-freebsd_kld_group: freebsd_kld
-freebsd_kld_log_dir: /var/log/freebsd_kld
-freebsd_kld_db_dir: "{{ __freebsd_kld_db_dir }}"
-freebsd_kld_service: freebsd_kld
-freebsd_kld_conf_dir: "{{ __freebsd_kld_conf_dir }}"
-freebsd_kld_conf_file: "{{ __freebsd_kld_conf_dir }}/freebsd_kld.conf"
-freebsd_kld_flags: ""
+freebsd_kld: []

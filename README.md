@@ -1,6 +1,10 @@
-# ansible-role-freebsd_kld
+# `trombik.freebsd_kld`
 
-A brief description of the role goes here.
+A thin wrapper of `kld` `ansible` module.
+
+`kld` is not yet part of `ansible`. Until then, this role includes
+[ansible-freebsd-modules](https://github.com/dlundgren/ansible-freebsd-modules)
+as a `git` `submodule`.
 
 # Requirements
 
@@ -8,9 +12,19 @@ None
 
 # Role Variables
 
-| variable | description | default |
+| Variable | Description | Default |
 |----------|-------------|---------|
+| `freebsd_kld` | a list of kernel modules to load (see below) | `[]` |
 
+## `freebsd_kld`
+
+This variable is a list of dict.
+
+| Key | Description | Mandatory? |
+|-----|-------------|------------|
+| `name` | Name of the kernel module. `.ko` is typically not needed |
+| `load` | Load or unload the module |
+| `boot` | Apply the kernel module at boot.|
 
 # Dependencies
 
@@ -19,11 +33,22 @@ None
 # Example Playbook
 
 ```yaml
+---
+- hosts: localhost
+  roles:
+    - ansible-role-freebsd_kld
+  vars:
+    freebsd_kld:
+      - name: u3g
+      - name: ichsmb
+        load: yes
+        boot: yes
 ```
 
 # License
 
 ```
+Copyright (c) 2014 David Lundgren
 Copyright (c) 2020 Tomoyuki Sakurai <y@trombik.org>
 
 Permission to use, copy, modify, and distribute this software for any

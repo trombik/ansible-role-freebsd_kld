@@ -1,0 +1,3 @@
+[submodule "extra_modules/ansible-freebsd-modules"]
+	path = extra_modules/ansible-freebsd-modules
+	url = https://github.com/dlundgren/ansible-freebsd-modules.git

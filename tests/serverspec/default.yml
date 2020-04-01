@@ -3,4 +3,8 @@
   roles:
     - ansible-role-freebsd_kld
   vars:
-    freebsd_kld_config: ""
+    freebsd_kld:
+      - name: u3g
+      - name: ichsmb
+        load: yes
+        boot: yes

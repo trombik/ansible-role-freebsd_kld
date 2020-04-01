@@ -1,6 +1,0 @@
----
-
-- name: Install freebsd_kld
-  pkgng:
-    name: freebsd_kld
-    state: present
