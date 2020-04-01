@@ -1,0 +1,6 @@
+---
+
+- name: Restart freebsd_kld
+  service:
+    name: freebsd_kld
+    state: restarted

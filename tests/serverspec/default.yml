@@ -1,0 +1,6 @@
+---
+- hosts: localhost
+  roles:
+    - ansible-role-freebsd_kld
+  vars:
+    freebsd_kld_config: ""
