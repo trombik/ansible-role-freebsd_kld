@@ -1,7 +1,7 @@
 require "spec_helper"
 require "serverspec"
 
-klds = %w[ u3g ichsmb ]
+klds = %w[u3g ichsmb]
 
 klds.each do |k|
   describe command "/sbin/kldstat -n /boot/kernel/#{k}.ko" do
