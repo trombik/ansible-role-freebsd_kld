@@ -3,7 +3,7 @@
 A thin wrapper of `kld` `ansible` module.
 
 `kld` is not yet part of `ansible`. Until then, this role includes
-[ansible-freebsd-modules](https://github.com/dlundgren/ansible-freebsd-modules)
+[dlundgren/ansible-freebsd-modules](https://github.com/dlundgren/ansible-freebsd-modules)
 as a `git` `submodule`.
 
 # Requirements
